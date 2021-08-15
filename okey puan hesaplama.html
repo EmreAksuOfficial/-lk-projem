@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="tr-TR">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Language" content="tr">
+<meta charset="utf-8">
+<title>Okey Puan hesapla</title>
+	<style>
+	#secim{
+		text-align: center;
+		margin-bottom: 10px;
+	}
+	.bas{
+		width : 100px;
+		height : 30px;
+		background-color:paleturquoise;
+		border : 2px solid rgba(246, 226, 226, 0.555);
+		border-top-right-radius	: 10px;
+		border-top-left-radius	: 10px;
+		border-bottom-right-radius	: 10px;
+		border-bottom-left-radius	: 10px;
+		
+	}
+	.bas:hover{
+		width : 110px;
+		color: white;
+		
+	}
+	#üstBaslik {
+	text-align : center;
+	}
+	table{
+		width: 480px;
+		
+	}
+	input{
+		width: 50px;
+	}
+	.puan{
+		width: 30px;
+	}
+	#tekliclass{
+		display : none;
+	}
+	#ciftliclass{
+		display : none;
+	}
+	
+	.grup{
+		width: 100px;
+	}
+	
+	#ciftlicerceve{
+		margin-left : 110px;
+	
+	}
+	.teklicerceve{
+		margin-left: 12px;
+		
+	}
+	#hesapla{
+		text-align : center;
+		display : none;
+	}
+	#ciftHesapla{
+	  width:80px; text-align:center;
+	  margin-left:50px;
+	}
+	#tekHesapla{
+	  width:80px; 
+	  text-align:center;
+	}
+	#goster{
+	  width:480px; 
+	  height:auto;
+	  min-height: 10px;
+	  color:rgb(6, 36, 34)
+	}
+	.goster{
+		text-align:center;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: medium;
+		font-style: normal;
+
+	}
+		
+	#esas{
+		color: rgb(37, 35, 35);
+		
+	}
+	#footer{
+	  width:480px; 
+	  height:auto;
+	  min-height: 10px;
+	  color: darkslategrey;
+	}
+	input[ type = text]{
+		border-top-right-radius	:5px;
+		border-top-left-radius	: 5px;
+		border-bottom-right-radius	: 5px;
+		border-bottom-left-radius	: 5px;
+		border: none;
+		float: right;
+	}
+
+	
+	</style>
+</head>
+
+<body>
+	<div id = "anaCerceve" style = "width: 480px; height:auto; background-color : rgba(180, 180, 180, 0.87);">	
+		<div id = "üstBaslik">
+		
+			<svg height="150" width="400">
+			  <defs>
+				<linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="0%">
+				  <stop offset="0%" style="stop-color:rgba(37, 136, 218, 0.774);stop-opacity:1" />
+				  <stop offset="100%" style="stop-color:rgb(0, 247, 255);stop-opacity:1" />
+				</linearGradient>
+				</defs>
+				
+				<ellipse cx="200" cy="70" rx="130" ry="55" fill="url(#grad3)" />
+				
+				<text fill="#ffffff" font-size="20" font-family="Verdana" x="95" y="75">
+					Okey Puan Hesaplama
+				</text>
+			</svg>
+		</div>
+		<div id = "secim">
+
+
+		<button class = "bas" onclick = tekli()>Tekli</button>
+		<button class = "bas" onclick = esli()>Eşli</button>
+		</div>
+		<div id = "esas">
+			<div class = "teklicerceve" >
+				<form>
+					<table id = "tekliclass">
+						<tr><td>İsim 1 : <input type = text id = "isim1"></td>
+							<td>İsim 2 : <input type = text id = "isim2"></td>
+							<td>İsim 3 : <input type = text id = "isim3"></td>
+							<td>İsim 4 : <input type = text id = "isim4"></td>
+						</tr>
+						<tr><td>Puan 1 : <input class = "puanTek1" type = text ></td>
+							<td>Puan 1 : <input class = "puanTek2" type = text ></td>
+							<td>Puan 1 : <input class = "puanTek3" type = text></td>
+							<td>Puan 1 : <input class = "puanTek4" type = text ></td>
+						</tr>
+						<tr><td>Puan 2 : <input class = "puanTek1" type = text ></td>
+							<td>Puan 2 : <input class = "puanTek2" type = text ></td>
+							<td>Puan 2 : <input class = "puanTek3" type = text ></td>
+							<td>Puan 2 : <input class = "puanTek4" type = text ></td>
+						</tr>
+						<tr><td>Puan 3 : <input class = "puanTek1" type = text ></td>
+							<td>Puan 3 : <input class = "puanTek2" type = text ></td>
+							<td>Puan 3 : <input class = "puanTek3" type = text ></td>
+							<td>Puan 3 : <input class = "puanTek4" type = text ></td>
+						</tr>
+						<tr><td>Puan 4 : <input class = "puanTek1" type = text ></td>
+							<td>Puan 4 : <input class = "puanTek2" type = text ></td>
+							<td>Puan 4 : <input class = "puanTek3" type = text ></td>
+							<td>Puan 4 : <input class = "puanTek4" type = text ></td>
+						</tr>
+						<tr><td>Puan 5 : <input class = "puanTek1" type = text ></td>
+							<td>Puan 5 : <input class = "puanTek2" type = text ></td>
+							<td>Puan 5 : <input class = "puanTek3" type = text ></td>
+							<td>Puan 5 : <input class = "puanTek4" type = text ></td>
+						</tr>
+						<tr><td>Puan 6 : <input class = "puanTek1" type = text ></td>
+							<td>Puan 6 : <input class = "puanTek2" type = text ></td>
+							<td>Puan 6 : <input class = "puanTek3" type = text ></td>
+							<td>Puan 6 : <input class = "puanTek4" type = text ></td>
+						</tr>
+						<tr style = "text-align:center;">
+						<td style = "padding-right: 50px;" colspan = 4 >
+						<input id = "tekHesapla" type = button value = "Hesapla" onclick = hesaplatek()>
+						<input id = "tekTemizle" type = reset value = "Temizle"  style = "width:80px; text-align:center;">
+						</td>
+						</tr>
+					</table>
+				</form>
+			</div>
+			<div id = "ciftlicerceve">
+				<form>
+					<table id = "ciftliclass">
+					
+					<tr><td>Grup 1 : <input type = text id = "grup1" ></td>
+						<td>Grup 2 : <input type = text id = "grup2" ></td>	
+					</tr>
+					<tr><td>Puan 1 : <input class = "puanCift1" type = text ></td>
+						<td>Puan 1 : <input class = "puanCift2" type = text ></td>
+					</tr>
+					<tr><td>Puan 2 : <input class = "puanCift1" type = text ></td>
+						<td>Puan 2 : <input class = "puanCift2" type = text ></td>
+					</tr>
+					<tr><td>Puan 3 : <input class = "puanCift1" type = text ></td>
+						<td>Puan 3 : <input class = "puanCift2" type = text ></td>
+					</tr>
+					<tr><td>Puan 4 : <input class = "puanCift1" type = text ></td>
+						<td>Puan 4 : <input class = "puanCift2" type = text ></td>
+					</tr>
+					<tr><td>Puan 5 : <input class = "puanCift1" type = text ></td>
+						<td>Puan 5 : <input class = "puanCift2" type = text ></td>
+					</tr>
+					<tr><td>Puan 6 : <input class = "puanCift1" type = text ></td>
+						<td>Puan 6 : <input class = "puanCift2" type = text ></td>
+					</tr>
+					<tr style = "text-align:center; ">
+						<td colspan = 4 >
+						<input id = "ciftHesapla" type = button value = "Hesapla" onclick=hesaplacift()>
+						<input id = "ciftTemizle" type = reset value = "Temizle"  style = "width:80px; text-align:center;">
+						</td>
+						</tr>
+					</table>
+				</form>
+			</div>
+		</div>
+		
+		<div id = "goster">
+			<div id = "goster1" class="goster"></div> <div id = "goster2" class="goster"></div> <div id = "goster3" class="goster"></div> <div id = "goster4" class="goster"></div>
+		</div>
+		<div id="footer">
+			<marquee behavior="" direction="">Created By Emre Aksu.</marquee>
+		</div>
+	</div>
+	
+</body>
+	<script>
+		// tek çift aktivasyonu
+
+		function tekli() {
+			var result = document.getElementById("tekliclass");
+			result.style.display = "block";
+			var sonuc = document.getElementById("ciftliclass");
+			sonuc.style.display = "none";
+			var degis = document.getElementById("hesapla");
+			degis.style.display = "block";
+		}
+		
+		function esli() {
+			var result = document.getElementById("tekliclass");
+			result.style.display = "none";
+			var sonuc = document.getElementById("ciftliclass");
+			sonuc.style.display = "block";
+			var degis = document.getElementById("hesapla");
+			degis.style.display = "block";
+		}
+		
+		//gelen class ile hesaplama yapma
+
+		function hesapla(puangir){
+			
+			var depo1 = document.getElementsByClassName(puangir)[0].value;
+			var depo2 = document.getElementsByClassName(puangir)[1].value;
+			var depo3 = document.getElementsByClassName(puangir)[2].value;
+			var depo4 = document.getElementsByClassName(puangir)[3].value;
+			var depo5 = document.getElementsByClassName(puangir)[4].value;
+			var depo6 = document.getElementsByClassName(puangir)[5].value;
+			var sayi1 = Number(depo1);
+			var sayi2 = Number(depo2);
+			var sayi3 = Number(depo3);
+			var sayi4 = Number(depo4);
+			var sayi5 = Number(depo5);
+			var sayi6 = Number(depo6);
+
+			return sayi1+ sayi2 + sayi3 + sayi4 +sayi5 + sayi6;
+		
+		}
+	
+
+		// hesaplananı yazdırma
+
+		function hesaplatek(){
+			
+			var ad1 = document.getElementById("isim1").value;
+			var ad2 = document.getElementById("isim2").value;
+			var ad3 = document.getElementById("isim3").value;
+			var ad4 = document.getElementById("isim4").value;
+
+			document.getElementById("goster1").innerHTML= ad1 + " = " + hesapla("puanTek1");
+			document.getElementById("goster2").innerHTML= ad2 + " = " + hesapla("puanTek2") ;
+			document.getElementById("goster3").innerHTML= ad3 + " = " + hesapla("puanTek3") ;
+			document.getElementById("goster4").innerHTML= ad4 + " = " + hesapla("puanTek4") ;
+		}
+
+		function hesaplacift(){
+			var ad1 = document.getElementById("grup1").value;
+			var ad2 = document.getElementById("grup2").value;
+			
+			document.getElementById("goster1").innerHTML= ad1 + " = " +  hesapla("puanCift1");
+			document.getElementById("goster2").innerHTML= ad2 + " = " + hesapla("puanCift2") ;
+			
+		}
+		
+		
+		
+	</script>
+</html>
+
+
